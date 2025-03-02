@@ -13,13 +13,5 @@ public class InputController {
     public String getForm(@RequestParam(value = "previous",required = false) String previous,Model model) {
         model.addAttribute("previous",previous);
         return "input";
-    }
-
-    @PostMapping("/output")
-    public String postForm(@RequestParam("val") String val,Model model) {
-        //フォームから送信されてきた値をModelに登録
-        model.addAttribute("val",val);
-        //output.htmlに画面遷移
-        return "output";
-    }
+   }
 }
